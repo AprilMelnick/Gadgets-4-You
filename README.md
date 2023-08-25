@@ -2,6 +2,7 @@
 
 ## Key Learnings
  - Basic SQL
+ - Google BigQuery
  - Aggregate Functions
  - Team Collaboration
 
