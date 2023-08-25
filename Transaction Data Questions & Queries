@@ -1,0 +1,70 @@
+/*
+
+Transaction Data Questions and Queries for Gadgets4You: 
+
+*/
+
+1. What is the time range of the data set (first day and last day)?
+
+SELECT MIN(Date) AS FirstDay, MAX(Date) AS LastDay
+FROM `groupproject-390008.Ecommerce.SalesTransaction`;
+
+
+2. How many unique transactions have been recorded in 2018?
+
+SELECT COUNT(Date) AS Transactions2018
+FROM `groupproject-390008.Ecommerce.SalesTransaction`
+WHERE Date BETWEEN '2018-01-01' AND '2018-12-31';
+
+
+3. How many unique transactions have been recorded in 2019?
+
+SELECT COUNT(Date) AS Transactions2019
+FROM `groupproject-390008.Ecommerce.SalesTransaction`
+WHERE Date BETWEEN '2019-01-01' AND '2019-12-31';
+
+4. What is the name and number of the bestselling product and how many times has it been sold?
+
+SELECT ProductName, ProductNo, SUM(Quantity) AS NumberOfSales
+FROM `groupproject-390008.Ecommerce.SalesTransaction`
+GROUP BY ProductName, ProductNo
+ORDER BY SUM(Quantity) DESC
+LIMIT 1;
+
+
+5. Which products have been sold only once within the time range and have ‘Blue’ in their name?
+
+SELECT  ProductName, SUM(Quantity) AS NumberOfSales
+FROM `groupproject-390008.Ecommerce.SalesTransaction`
+WHERE ProductName LIKE '%Blue%'
+GROUP BY ProductName, Quantity
+HAVING SUM(Quantity)=1;
+
+6. What is the average number of unique products (regardless of the quantity) per transaction?
+
+
+SELECT COUNT(ProductNo) / COUNT(DISTINCT TransactionNo) as AverageNumberOfProducts
+FROM `groupproject-390008.Ecommerce.SalesTransaction`;
+
+
+7. What is the average cart value?
+
+SELECT SUM(Price * Quantity) / COUNT(DISTINCT TransactionNo)as AverageCartValue
+FROM `groupproject-390008.Ecommerce.SalesTransaction`;
+
+
+8. What’s the country with the highest average cart value and what’s the one with the lowest?
+
+SELECT DISTINCT Country,SUM(Price * Quantity) / COUNT(DISTINCT TransactionNo)as AverageCartValue
+FROM `groupproject-390008.Ecommerce.SalesTransaction`
+GROUP BY Country
+ORDER BY AverageCartValue DESC;
+
+
+9.Customers from which countries have placed the most orders in 2019?
+
+SELECT DISTINCT Country, COUNT(DISTINCT TransactionNo) AS NumberOfOrders
+FROM `groupproject-390008.Ecommerce.SalesTransaction`
+WHERE Date BETWEEN '2019-01-01' AND '2019-12-31'
+GROUP BY Country
+ORDER BY NumberOfOrders DESC;
