@@ -1,4 +1,4 @@
-# Gadgets-4-You
+# Gadgets 4 You Transaction Data
 
 ## Key Learnings
  - Basic SQL
@@ -22,6 +22,11 @@ $~~~~~~~~~~$
 
 In this project prepare a presentation for the company’s CMO, using your findings from the data provided in the CVS file and the answers to the questions shared by Gadgets4You.
 
+$~~~~~~~~~~$
+
+## Key Learnings
+
+- How to use aggregate functions and aliases in SQL to make data understandable for stakeholders. 
  
    
 
