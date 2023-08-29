@@ -8,7 +8,7 @@
 
 $~~~~~~~~~~$
 
-## Details
+## Project Details
 
 Gadgets4You is a UK-based E-Commerce store operating mainly in Europe that sells all kinds of items from lunch boxes to party supplies to decorations.
 
