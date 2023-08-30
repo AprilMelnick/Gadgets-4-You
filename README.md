@@ -19,6 +19,18 @@ You and your team are happily accepting the job to query the transaction data pr
 
 $~~~~~~~~~~$
 
+## Questions Regarding Business 
+
+-  What is the time range of the data set (first day and last day)?
+-  How many unique transactions have been recorded in 2018?
+-  How many unique transactions have been recorded in 2019?
+-  What is the name and number of the bestselling product and how many times has it been sold?
+-  Which products have been sold only once within the time range and have ‘Blue’ in their name?
+-  What is the average number of unique products (regardless of the quantity) per transaction?
+-  What is the average cart value?
+-  What’s the country with the highest average cart value and what’s the one with the lowest?
+-  Customers from which countries have placed the most orders in 2019?
+
 ## Deliverable
 
 In this project prepare a presentation for the company’s CMO, using your findings from the data provided in the CSV file and the answers to the questions shared by Gadgets4You.
