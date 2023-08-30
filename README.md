@@ -1,6 +1,6 @@
 # Gadgets 4 You Transaction Data
 
-## Key Learnings
+## Skills used
  - Basic SQL
  - Google BigQuery
  - Aggregate Functions
