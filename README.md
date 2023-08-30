@@ -4,6 +4,7 @@
  - Basic SQL
  - Google BigQuery
  - Aggregate Functions
+ - Alias Operator
  - Team Collaboration
 
 $~~~~~~~~~~$
