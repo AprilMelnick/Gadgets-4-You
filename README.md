@@ -1,5 +1,7 @@
 # Gadgets 4 You Transaction Data
 
+$~~~~~~~~~~$
+
 ## Skills used
  - Basic SQL
  - Google BigQuery
